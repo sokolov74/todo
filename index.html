@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/todo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="logo-container">
+          <img
+            src="/img/web_logo.webp"
+            alt="Логотип компании"
+            class="logo"
+            onerror="this.style.display='none'"
+          />
+        </div>
+        <nav class="nav-menu">
+          <a href="#" data-page="index.html" class="nav-button main-btn"
+            >Главная</a
+          >
+          <a href="#" data-page="whatsapp.html" class="nav-button whatsapp-btn"
+            >WhatsApp</a
+          >
+          <a href="#" data-page="telegram.html" class="nav-button telegram-btn"
+            >Telegram</a
+          >
+          <a href="#" data-page="todo.html" class="nav-button to-do-btn"
+            >Список дел</a
+          >
+          <a href="#" data-page="app3.html" class="nav-button apps"
+            >Приложение 3</a
+          >
+        </nav>
+        <button class="mobile-menu-button">☰</button>
+      </div>
+    </header>
+
+    <div id="content">
+      <div class="app-container">
+        <div class="app-header">
+          <h1 style="color: #667291">
+            Добро пожаловать на портал веб-приложений
+          </h1>
+        </div>
+
+        <div class="app-content">
+          <div class="app-description">
+            <h2 style="color: #b4b4b4">Доступные приложения:</h2>
+
+            <div class="app-card">
+              <h3>
+                Чат WhatsApp
+                <i class="fa-brands fa-whatsapp" style="color: #25d366"></i>
+              </h3>
+              <p>Быстрый переход в чат WhatsApp по номеру телефона</p>
+              <a href="#" data-page="whatsapp.html" class="app-link"
+                >Открыть приложение</a
+              >
+            </div>
+
+            <div class="app-card">
+              <h3>
+                Чат Telegram
+                <i class="fa-brands fa-telegram" style="color: #0088cc"></i>
+              </h3>
+              <p>Быстрый переход в Telegram по номеру телефона или username</p>
+              <a href="#" data-page="telegram.html" class="app-link"
+                >Открыть приложение</a
+              >
+            </div>
+
+            <div class="app-card">
+              <h3>
+                Список дел (To-Do List)
+                <i style="color: #ff5722" class="fas fa-clipboard-list"></i>
+              </h3>
+              <p>
+                Классическое приложение для добавления и отметки выполненных
+                задач
+              </p>
+              <a href="#" data-page="todo.html" class="app-link"
+                >Открыть приложение</a
+              >
+            </div>
+
+            <div class="app-card">
+              <h3>Веб-приложение 3</h3>
+              <p>Описание третьего веб-приложения</p>
+              <a href="#" data-page="app3.html" class="app-link"
+                >Открыть приложение</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/menu.js"></script>
+    <script type="module" src="/js/todo/app.js"></script>
+    <script src="https://unpkg.com/mammoth@1.4.0/mammoth.browser.min.js"></script>
+  </body>
+</html>

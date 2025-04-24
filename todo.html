@@ -1,0 +1,95 @@
+<div class="app-container">
+  <div class="app-header">
+    <h1>
+      Список дел - (To-Do List)
+      <i class="fas fa-clipboard-list" style="color: #ff5722"></i>
+    </h1>
+  </div>
+
+  <div class="app-content">
+    <div class="todo-app">
+      <div class="import-container">
+        <button id="import-word-btn" class="import-btn">
+          <i class="fas fa-file-word"></i> Импорт из Word
+        </button>
+        <input
+          type="file"
+          id="word-file-input"
+          accept=".docx"
+          style="display: none"
+        />
+        <div class="import-info">
+          <i class="fas fa-info-circle"></i>
+          <span
+            >Поддерживаются файлы .docx. Заголовки будут использованы как
+            названия групп, текст абзацев - как задачи.</span
+          >
+        </div>
+      </div>
+
+      <div
+        id="no-groups-message"
+        style="
+          margin-bottom: 25px;
+          text-align: center;
+          padding: 20px;
+          color: #888;
+          display: none;
+        "
+      >
+        <p>Сначала создайте группу</p>
+      </div>
+
+      <div class="group-controls">
+        <input type="text" id="group-name" placeholder="Название группы" />
+        <button id="add-group-btn">
+          <i class="fas fa-plus"></i> Добавить группу
+        </button>
+      </div>
+
+      <div style="border: 0" class="input-container">
+        <select style="margin: 8px 0px" id="group-selector">
+          <option value="">Выбрать группу</option>
+        </select>
+        <input
+          type="text"
+          id="todo-input"
+          placeholder="Добавьте новую задачу..."
+          autofocus
+        />
+        <button id="add-btn">
+          <i class="fas fa-plus"></i> Добавить задачу
+        </button>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="active">Активные</button>
+        <button class="filter-btn" data-filter="completed">Выполненные</button>
+        <label class="filter-checkbox">
+          <input type="checkbox" id="filter-in-current-group" />
+          <span>Только в выбранной группе</span>
+        </label>
+      </div>
+
+      <div id="groups-container"></div>
+
+      <div class="stats">
+        <span id="items-left">0 задач осталось</span>
+        <span id="items-completed">0 выполнено</span>
+        <button id="clear-completed">Очистить выполненные</button>
+        <button id="clear-all">Удалить все задачи</button>
+        <button id="clear-all-groups">Удалить все группы</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button id="clear-cache-btn" class="btn btn-danger">Очистить кеш</button>
+<div id="toast-notification" class="toast-hidden"></div>
+
+<div class="version">
+  <span>Версия 1.6</span>
+</div>
+
+
